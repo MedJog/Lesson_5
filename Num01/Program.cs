@@ -18,11 +18,12 @@ void PrintArray(int[] col) // вывод элементов массива на 
     int count = col.Length;
     int position = 0;
     while (position < count)
-    {
+     {
      Console.Write($"{col[position]} ");
-     position++;
+      position++;
     }
-} 
+}
+
 int Num(int[]coll)
 {
     int N = coll.Length;
