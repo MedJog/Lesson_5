@@ -24,25 +24,28 @@ void PrintArray(int[] col) // вывод элементов массива на 
     }
 }
 
-int Num(int[]coll)
+int EvenNumbers(int[]coll) // функция поиска чётных чисел в массиве
 {
     int N = coll.Length;
     int index = 0;
     int result = 0;
     while (index < N)
     {
-        if (coll[index] / 2 == 0)
-    {
-        Console.WriteLine(coll[index]);
-        result = result + 1;
-    }
+        if (coll[index] % 2 == 0)
+            {
+            //Console.Write($"{coll[index]} ");  // Вывод чётных элементов массива на экран
+            result = result + 1;
+            }
     index++;
     }
  return result;
-}
+} 
  FillArray(array);
  PrintArray(array);
- Num(array);
+ Console.WriteLine();
+ int res = EvenNumbers(array);
+Console.WriteLine($"Количество чётных чисел в этом массиве - {res}.");
+
 
 
 
