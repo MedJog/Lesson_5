@@ -9,7 +9,7 @@ void FillArray(int[] collection) // Заполнение массива случ
     int index = 0;
     while (index < length)
      {
-     collection[index] = new Random().Next(1, 10); 
+     collection[index] = new Random().Next(-10, 10); 
      index++; 
     }
 }
@@ -23,3 +23,23 @@ void PrintArray(int[] col) // вывод элементов массива на 
       position++;
     }
 }
+
+int Sum(int[] coll) // функция для поиска суммы элементов
+{
+    int N = coll.Length;
+    int index = 1;
+    int result = 0;
+    while (index < N)
+    {
+        result = result + coll[index];
+        index = index + 2;
+    }
+ return result;
+} 
+
+
+FillArray(array);
+PrintArray(array);
+Console.WriteLine(); // вывод пустой строки 
+int sum = Sum(array);
+Console.WriteLine($"Сумма элементов равна {sum}.");
